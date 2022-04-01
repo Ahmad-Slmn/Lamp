@@ -68,6 +68,13 @@
             document.querySelector("header nav").classList.remove("hidemenu")
 
             this.classList.toggle("active");
+            
+            if(this.classList.contains("active")){
+                
+                document.querySelector(".landing .text-container h1").style.color = "#00986f"
+            }else{
+                 document.querySelector(".landing .text-container h1").style.color = "#fff"
+            }
 
             flash.classList.toggle("open");
 
