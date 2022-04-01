@@ -1,0 +1,328 @@
+/* Start My Frame Work */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-transform: capitalize;
+    font-family: arial
+}
+
+input {
+    outline: none
+}
+
+a {
+    text-decoration: none
+}
+
+.active {
+    background-color: green
+}
+
+.active span {
+    background-color: #fff;
+    margin-left: 31px
+}
+
+.open {
+    display: block !important
+}
+
+:root {
+    --main-color: #04a76a;
+    --trans: .4s ease-in-out
+}
+
+/* End My Frame Work */
+
+/* Strat Header */
+header {
+    background-color: #1d2026;
+    height: 70px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    padding: 5px
+}
+
+.logo {
+    position: relative;
+    display: flex
+}
+
+.bars {
+    position: absolute;
+    top: 26px;
+    right: 25px;
+    width: fit-content;
+    cursor: pointer;
+    display: none
+}
+
+.bars span {
+    cursor: pointer;
+    display: block;
+    width: 20px;
+    height: 4px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9
+}
+
+.bars span:nth-child(2) {
+    top: 6px
+}
+
+.bars span:last-of-type {
+    top: 12px
+}
+
+header > .logo h2 {
+    font-size: 25px;
+    word-spacing: -5px;
+    margin: 0 5px
+}
+
+header .logo h2 span {
+    color: var(--main-color)
+}
+
+header nav ol {
+    display: flex
+}
+
+header nav ol li {
+    padding: 0 10px
+}
+
+header nav ol li a {
+    color: #fff;
+    font-weight: bold;
+    transition: var(--trans);
+    display: block
+}
+
+header nav ol li a:hover {
+    color: var(--main-color);
+    transform: translateX(3px)
+}
+
+header nav ol li a:active {
+    transform: translateY(2px)
+}
+
+header nav button {
+    background-color: #efefef;
+    height: 30px;
+    width: 60px;
+    border: 0;
+    border-radius: 20px;
+    transition: var(--trans);
+    cursor: pointer
+}
+
+header nav button span {
+    display: block;
+    background-color: #999;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    margin-left: 2px;
+    transition: var(--trans)
+}
+
+/* End Header */
+
+/* Strat Landing */
+.landing {
+    position: relative;
+    height: calc(100vh - 72px);
+    background-color: #1d2026;
+    color: #fff;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+}
+
+.lamp-box,
+.text-box {
+    position: relative;
+    width: 100%
+}
+
+.text-box {
+    top: 100px
+}
+
+.landing .lamp-container {
+    width: 100%
+}
+
+.landing .lamp-container img:first-of-type {
+    width: 200px;
+    position: absolute;
+    left: 150px;
+    top: -90px
+}
+
+.landing .lamp-container img:last-of-type {
+    width: 700px;
+    position: absolute;
+    top: 290px;
+    left: 250px;
+    transform: translateX(-50%);
+    margin-left: -10px;
+    transition: var(--trans);
+    display: none
+}
+
+.landing .text-container > p {
+
+    line-height: 1.7
+}
+
+.landing .text-container h1 {
+    font-size: 70px;
+    font-weight: 400
+}
+
+.landing .text-container a {
+    background-color: #00986f;
+    padding: 14px 40px;
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 10px;
+    border-radius: 30px
+}
+
+.landing .text-container .control {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    color: #fff
+}
+
+.landing .text-container .control > div {
+    width: 250px;
+    height: 4px;
+    background: #fff;
+    margin: 0 20px;
+    border-radius: 3px
+}
+
+.landing .text-container .control > div span {
+    width: 50%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #00986f;
+    display: block
+}
+
+/* End Landing */
+
+@media(max-width:450px) {
+    .landing .lamp-container img:first-of-type {
+        left: 85px;
+        top: -123px;
+    }
+
+    .landing .lamp-container img:last-of-type {
+        left: 185px;
+        top: 255px
+    }
+
+    .text-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center
+    }
+
+    .landing .text-container h1 {
+        margin: 10px 0
+    }
+
+    .landing .text-container > p {
+        font-size: 15px
+    }
+}
+
+@media(max-width:767px) {
+
+    .text-box {
+        top: 200px
+    }
+
+    .landing .text-container h1 {
+        font-size: 30px
+    }
+
+    header nav {
+        position: fixed;
+        top: 0;
+        z-index: 2;
+        display: inline-block;
+        width: 100%;
+        padding: 70px 7% 0;
+        max-height: 70px;
+        overflow: hidden;
+        transition: var(--trans);
+        background: #00986f
+    }
+
+    header nav ol {
+        flex-direction: column;
+        text-align: right
+    }
+
+    header nav ol li {
+        padding: 0
+    }
+
+    header nav ol li a {
+        padding: 10px 0;
+        font-size: 20px
+    }
+
+    header nav ol li a:hover {
+        color: inherit
+    }
+
+    header > .logo h2 {
+        position: fixed;
+        top: 20px;
+        left: 0;
+        z-index: 9;
+        color: #fff
+    }
+
+    header .logo h2 span {
+        color: inherit
+    }
+
+    header nav button {
+        position: absolute;
+        top: 75px;
+        left: 2px
+    }
+
+    .hidemenu {
+        max-height: 375px !important
+    }
+
+    .bars {
+        display: block !important
+    }
+}

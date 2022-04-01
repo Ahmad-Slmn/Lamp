@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="UTF-8" />
+    <meta name="discription" content="js" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lamp</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- My Main Style-css-->
+    <link rel='stylesheet' href="css/style.css" />
+</head>
+
+<body>
+    <!--  Start header -->
+    <header>
+        <div class="logo">
+            <h2>vue <span>lamp</span></h2>
+        </div>
+
+        <nav>
+            <ol>
+                <li><a href="">latest</a></li>
+                <li><a href="">modern</a></li>
+                <li><a href="">contemporary</a></li>
+                <li><a href="">affordable</a></li>
+            </ol>
+            <button type="button" id="btn" on><span></span></button>
+        </nav>
+        <div class="bars">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <!-- End header -->
+
+    <!-- Strat Landing -->
+    <div class="landing">
+        <div class="lamp-box">
+            <div class="lamp-container">
+                <img src="image/lamp.png" alt="lamp">
+                <img src="image/light.png" alt="light" id="light">
+            </div>
+        </div>
+
+        <div class="text-box">
+            <div class="text-container">
+                <h1>latest in lighting</h1>
+                <p>this is In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document</p>
+                <a href="">click all collections</a>
+                <div class="control">
+                    <p>04</p>
+                    <div><span></span></div>
+                    <p>05</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Landing -->
+    <script>
+        const button = document.getElementById("btn");
+        const flash = document.getElementById("light");
+        const head = document.querySelector("h1")
+
+        button.onclick = function() {
+
+            document.querySelector("header nav").classList.remove("hidemenu")
+
+            this.classList.toggle("active");
+
+            flash.classList.toggle("open");
+
+            if (button.classList.contains("active")) {
+                head.textContent = "the lamp is turn on now";
+
+            } else {
+                head.textContent = "the lamp is turn off now"
+            }
+        }
+
+        document.querySelector(".bars").onclick = function() {
+
+            document.querySelector("header nav").classList.toggle("hidemenu")
+        }
+
+        let links = document.querySelectorAll("ol li a");
+
+        links.forEach(function(e) {
+
+            e.onclick = function(el) {
+
+                el.preventDefault();
+
+                document.querySelector("header nav").classList.toggle("hidemenu")
+            }
+        })
+
+        document.querySelectorAll("ol li a").onclick = function() {
+
+            document.querySelector("header nav").classList.toggle("hidemenu")
+        }
+    </script>
+</body></html>
