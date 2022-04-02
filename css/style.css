@@ -59,12 +59,13 @@ header nav {
 }
 
 .bars {
-    position: absolute;
+    position: fixed;
     top: 26px;
     right: 25px;
     width: fit-content;
     cursor: pointer;
-    display: none
+    display: none;
+    z-index: 9
 }
 
 .bars span {
