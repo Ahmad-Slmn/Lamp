@@ -25,7 +25,7 @@
                 <li><a href="">contemporary</a></li>
                 <li><a href="">affordable</a></li>
             </ol>
-            <button type="button" id="btn" on><span></span></button>
+            <button type="button" id="btn"><span></span></button>
         </nav>
         <div class="bars">
             <span></span>
@@ -64,6 +64,8 @@
         const head = document.querySelector("h1")
 
         button.onclick = function() {
+            
+            document.querySelector(".bars").classList.remove("menu");
 
             document.querySelector("header nav").classList.remove("hidemenu")
 
