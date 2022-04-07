@@ -68,12 +68,12 @@
             document.querySelector("header nav").classList.remove("hidemenu")
 
             this.classList.toggle("active");
-            
-            if(this.classList.contains("active")){
-                
+
+            if (this.classList.contains("active")) {
+
                 document.querySelector(".landing .text-container h1").style.color = "#00986f"
-            }else{
-                 document.querySelector(".landing .text-container h1").style.color = "#fff"
+            } else {
+                document.querySelector(".landing .text-container h1").style.color = "#fff"
             }
 
             flash.classList.toggle("open");
@@ -88,6 +88,8 @@
 
         document.querySelector(".bars").onclick = function() {
 
+            this.classList.toggle("menu");
+
             document.querySelector("header nav").classList.toggle("hidemenu")
         }
 
@@ -98,6 +100,8 @@
             e.onclick = function(el) {
 
                 el.preventDefault();
+                
+                 document.querySelector(".bars").classList.remove("menu");
 
                 document.querySelector("header nav").classList.toggle("hidemenu")
             }

@@ -61,31 +61,52 @@ header nav {
 .bars {
     position: fixed;
     top: 26px;
-    right: 25px;
-    width: fit-content;
+    right: 7px;
+    width: 20px;
+    height: 14px;
     cursor: pointer;
     display: none;
-    z-index: 9
+    z-index: 9;
+    transition: all var(--trans)
 }
 
 .bars span {
-    cursor: pointer;
-    display: block;
-    width: 20px;
-    height: 4px;
+    width: 100%;
+    height: 3px;
     background: #fff;
     position: absolute;
     left: 0;
     top: 0;
-    z-index: 9
+    z-index: 9;
+    transition: all var(--trans)
 }
 
 .bars span:nth-child(2) {
     top: 6px
 }
 
+
 .bars span:last-of-type {
     top: 12px
+}
+
+.menu span:nth-child(2) {
+    opacity: 0;
+    transition: .1s
+}
+
+.menu span:first-of-type,
+.menu span:last-of-type {
+
+    top: 6px
+}
+
+.menu span:first-of-type {
+    transform: rotate(45deg)
+}
+
+.menu span:last-of-type {
+    transform: rotate(-45deg)
 }
 
 header > .logo h2 {
