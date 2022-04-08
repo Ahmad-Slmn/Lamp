@@ -5,9 +5,7 @@
     <meta name="discription" content="js" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lamp</title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="css/all.min.css" />
-    <!-- My Main Style-css-->
+    <!-- Main Style-css-->
     <link rel='stylesheet' href="css/style.css" />
 </head>
 
@@ -64,7 +62,7 @@
         const head = document.querySelector("h1")
 
         button.onclick = function() {
-            
+
             document.querySelector(".bars").classList.remove("menu");
 
             document.querySelector("header nav").classList.remove("hidemenu")
@@ -102,8 +100,8 @@
             e.onclick = function(el) {
 
                 el.preventDefault();
-                
-                 document.querySelector(".bars").classList.remove("menu");
+
+                document.querySelector(".bars").classList.remove("menu");
 
                 document.querySelector("header nav").classList.toggle("hidemenu")
             }
